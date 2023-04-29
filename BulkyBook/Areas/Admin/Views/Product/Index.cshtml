@@ -1,0 +1,50 @@
+﻿@using System.Security.Cryptography
+@using BulkyBook.DataAccess.Repository.IRepository
+@model IEnumerable<Product>
+
+
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+
+        <div class="col-6 text" style="color: goldenrod; font-weight: bold; font-size: 24px;">
+            Product List
+        </div>
+
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary" style="background-color: goldenrod"><i class="bi bi-plus-circle"></i>&nbsp;Create New Product</a>
+        </div>
+
+    </div>
+</div>
+<table id="tblData" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+
+            <th>
+                ISBN
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+</table>
+
+
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}
